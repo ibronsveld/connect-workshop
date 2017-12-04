@@ -1,0 +1,11 @@
+/hst:hst/hst:configurations/myhippoproject/hst:workspace/hst:containers/contentlist/main/contentlist:
+  jcr:primaryType: hst:containeritemcomponent
+  jcr:uuid: 6a6127bb-e1e5-4a07-905c-6dc43bf6655b
+  hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsListComponent
+  hst:label: Content list
+  hst:parameternames: [documentTypes, sortField, sortOrder, includeSubtypes, showPagination,
+    path, pageSize]
+  hst:parametervalues: ['myhippoproject:contentdocument', '', desc, 'off', 'on', '',
+    '10']
+  hst:template: contentlist-main-contentlist
+  hst:xtype: hst.item

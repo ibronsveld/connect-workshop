@@ -1,0 +1,6 @@
+/hst:hst/hst:configurations/myhippoproject/hst:workspace/hst:containers/contentpage/main/content:
+  jcr:primaryType: hst:containeritemcomponent
+  jcr:uuid: 90e263f3-6a3f-4f7d-84a0-1a5071f823a0
+  hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
+  hst:template: contentpage-main
+  hst:xtype: hst.item

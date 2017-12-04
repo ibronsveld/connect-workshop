@@ -1,0 +1,10 @@
+/hst:hst/hst:configurations/myhippoproject/hst:workspace/hst:containers/homepage/main/search:
+  jcr:primaryType: hst:containeritemcomponent
+  jcr:uuid: edee2140-1d04-4a9a-9fb8-6a32a3044a37
+  hst:componentclassname: org.example.components.SearchComponent
+  hst:iconpath: images/essentials/catalog-component-icons/simple-content.png
+  hst:label: Search
+  hst:parameternames: [searchProvider]
+  hst:parametervalues: [search1]
+  hst:template: search-main
+  hst:xtype: hst.item

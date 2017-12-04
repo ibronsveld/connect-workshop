@@ -1,0 +1,4 @@
+/hst:hst/hst:configurations/myhippoproject/hst:workspace/hst:sitemenus/main/content:
+  jcr:primaryType: hst:sitemenuitem
+  jcr:uuid: 7377bb3e-047f-4dd3-8ce4-bfe85c1147f4
+  hst:referencesitemapitem: content

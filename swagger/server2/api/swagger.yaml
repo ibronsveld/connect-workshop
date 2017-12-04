@@ -1,0 +1,41 @@
+---
+swagger: "2.0"
+info:
+  description: "Example Search API description"
+  version: "0.0.1"
+  title: "Search API"
+paths:
+  /search:
+    get:
+      summary: "Searches for a term"
+      description: "Searches for a term.\nOptional query param of **size** determines\n\
+        size of returned array\n"
+      operationId: "searchGET"
+      parameters:
+      - name: "query"
+        in: "query"
+        description: "Term to search for"
+        required: true
+        type: "string"
+      - name: "size"
+        in: "query"
+        description: "Size of array"
+        required: false
+        type: "number"
+        format: "double"
+      - name: "options"
+        in: "query"
+        description: "Optional options"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "Successful response"
+          schema:
+            type: "array"
+            title: "ArrayOfDocuments"
+            items:
+              type: "object"
+              description: "JSON Object that returns the actual data"
+      x-swagger-router-controller: "Default"
+

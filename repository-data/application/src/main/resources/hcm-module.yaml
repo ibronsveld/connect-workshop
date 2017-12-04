@@ -1,0 +1,7 @@
+group: 
+  name: myhippoproject
+  after: hippo-cms
+project: myhippoproject
+module:
+  name: myhippoproject-repository-data-application
+  after: myhippoproject-repository-data-webfiles
