@@ -31,11 +31,28 @@
                         <constructor-arg name="typeToProvide" value="QUERY"/>
                     </bean>
                 </entry>
+                <entry key="size">
+                    <bean class="org.onehippo.crosslink.providers.QueryStringParameterProvider">
+                        <constructor-arg name="encoded" value="false"/>
+                        <constructor-arg name="parameter" value="size"/>
+                        <constructor-arg name="required" value="true"/>
+                        <constructor-arg name="typeToProvide" value="QUERY"/>
+                    </bean>
+                </entry>
+
+                <!--<entry key="size">-->
+                    <!--<bean class="org.onehippo.crosslink.providers.ConstantParameterProvider">-->
+                        <!--<constructor-arg name="encoded" value="false"/>-->
+                        <!--<constructor-arg name="value" value="100"/>-->
+                        <!--<constructor-arg name="required" value="true"/>-->
+                        <!--<constructor-arg name="typeToProvide" value="QUERY"/>-->
+                    <!--</bean>-->
+                <!--</entry>-->
             </map>
         </constructor-arg>
         <constructor-arg name="method" value="GET"/>
         <constructor-arg name="resourceName" value="server1"/>
-        <constructor-arg name="url" value="?query={query}"/>
+        <constructor-arg name="url" value="?query={query}&amp;size={size}"/>
     </bean>
 
     <bean id="search2" class="org.onehippo.crosslink.datasource.GenericDataSource">

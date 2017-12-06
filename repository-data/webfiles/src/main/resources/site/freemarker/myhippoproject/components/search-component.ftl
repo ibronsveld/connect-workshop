@@ -49,6 +49,26 @@
       <#case "search1">
 
       <#--TODO: Template here-->
+    <div>
+      <h2>${results["childCount"]} Results:</h2>
+
+      <#if results["childCount"] gt 0>
+        <#list results["children"]["collection"] as c>
+          <#assign result = c.valueMap />
+          <div class="row">
+            <div class="col-md-4">
+              <img src="${result["extendedData"]["valueMap"]["image"]}" style="max-width: 80px"/>
+            </div>
+            <div class="col-md-8">
+              <h3>${result["name"]} (${result["id"]})</h3>
+              <span>
+              ${result["description"]}
+      </span>
+            </div>
+          </div>
+        </#list>
+      </#if>
+    </div>
         <#break>
 
     </#switch>

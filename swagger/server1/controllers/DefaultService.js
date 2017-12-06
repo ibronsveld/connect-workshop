@@ -11,15 +11,35 @@ exports.searchGET = function (args, res, next) {
    * returns List
    **/
   // TODO IMPLEMENT
+
+  var docs = data.getDocuments(1000);
+
   var size = args["size"].value || 10;
   var query = args["query"].value;
 
-  if (Object.keys(examples).length > 0) {
+  if (query !== undefined) {
+    // Generate an array of items
+    var list = [];
+
+    docs.forEach(function (item) {
+      if (contains(item.id, query) || contains(item.name, query) || contains(item.extendedData.description, query)) {
+        list.push(item);
+      }
+    });
+
+    if (list.length > size) {
+      list.splice(size, list.length - size);
+    }
+
+    console.log(list);
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(examples[Object.keys(examples)[0]] || {}, null, 2));
+    res.end(JSON.stringify(list, null, 2));
+
   } else {
-    res.end();
+    res.status(404).end();
   }
+
+
 }
 
 
